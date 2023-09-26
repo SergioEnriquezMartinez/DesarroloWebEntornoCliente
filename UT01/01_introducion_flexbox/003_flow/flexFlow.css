@@ -1,0 +1,68 @@
+*{
+    margin: opx;
+}
+
+html, body{
+    height: 100%;
+}
+
+#caja{
+    background-color: aquamarine;
+    display: flex;
+}
+
+.rowWrap {
+    flex-flow: row wrap;
+}
+
+.rowNoWrap {
+    flex-flow: row nowrap;
+}
+
+.rowWrapReverse {
+    flex-flow: row wrap-reverse;
+}
+
+.rowReverseWrap {
+    flex-flow: row-reverse wrap;
+}
+
+.rowReverseNoWrap {
+    flex-flow: row-reverse nowrap;
+}
+
+.rowReverseWrapReverse {
+    flex-flow: row-reverse wrap-reverse;
+}
+
+.columnWrap {
+    flex-flow: column wrap;
+}
+
+.columnNoWrap {
+    flex-flow: column nowrap;
+}
+
+.columnWrapReverse {
+    flex-flow: column wrap-reverse;
+}
+.columnReverseWrap {
+    flex-flow: column-reverse wrap;
+}
+.columnReverseNoWrap {
+    flex-flow: column-reverse nowrap;
+}
+.columnReverseWrapReverse {
+    flex-flow: wrap-reverse;
+}
+
+.cuadro{
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    height: 25px;
+    width: 250px;
+}
