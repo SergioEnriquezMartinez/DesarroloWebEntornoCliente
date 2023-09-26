@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+}
+
+html {
+    background-color: aquamarine;
+    height: 50%;
+}
+
+body {
+    background-color: cornflowerblue;
+    height: 100%;
+    border: 10px solid orange;
+}
+
+#caja {
+    background-color: green;
+    height: 50%;
+    border: 10px solid blueviolet;
+}

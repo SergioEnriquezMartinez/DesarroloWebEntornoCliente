@@ -1,0 +1,33 @@
+*{
+    margin: opx;
+}
+
+html, body{
+    height: 100%;
+}
+#caja{
+    background-color: aquamarine;
+    display: flex;
+}
+.derecha{
+    flex-direction: row;
+}
+.izquierda{
+    flex-direction: row-reverse;
+}
+.abajo{
+    flex-direction: column;
+}
+.arriba{
+    flex-direction: column-reverse;
+}
+.cuadro{
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    height: 25px;
+    width: 70px;
+}
