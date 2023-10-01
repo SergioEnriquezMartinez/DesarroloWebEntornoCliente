@@ -1,11 +1,11 @@
-function rowWrap(){
+function flexStart(){
     borrarTodo();
-    document.getElementById("caja").classList.add("rowWrap");
+    document.getElementById("caja").classList.add("flexStart");
 }
 
-function rowNoWrap(){
+function flexEnd(){
     borrarTodo();
-    document.getElementById("caja").classList.add("rowNoWrap");
+    document.getElementById("caja").classList.add("flexEnd");
 }
 
 function rowWrapReverse(){
