@@ -8,68 +8,68 @@ function flexEnd(){
     document.getElementById("caja").classList.add("flexEnd");
 }
 
-function rowWrapReverse(){
+function start(){
     borrarTodo();
-    document.getElementById("caja").classList.add("rowWrapReverse");
+    document.getElementById("caja").classList.add("start");
 }
 
-function rowReverseWrap(){
+function end(){
     borrarTodo();
-    document.getElementById("caja").classList.add("rowReverseWrap");
+    document.getElementById("caja").classList.add("end");
 }
 
-function rowReverseNoWrap(){
+function left(){
     borrarTodo();
-    document.getElementById("caja").classList.add("rowReverseNoWrap");
+    document.getElementById("caja").classList.add("left");
 }
 
-function rowReverseWrapReverse(){
+function rigth(){
     borrarTodo();
-    document.getElementById("caja").classList.add("rowReverseWrapReverse");
+    document.getElementById("caja").classList.add("rigth");
 }
 
-function columnWrap() {
+function center() {
     borrarTodo();
-    document.getElementById("caja").classList.add("columnWrap");
+    document.getElementById("caja").classList.add("center");
 }
 
-function columnNoWrap(){
+function spaceBetween(){
     borrarTodo();
-    document.getElementById("caja").classList.add("columnNoWrap");
+    document.getElementById("caja").classList.add("spaceBetween");
 }
 
-function columnWrapReverse(){
+function spaceAround(){
     borrarTodo();
-    document.getElementById("caja").classList.add("columnWrapReverse");
+    document.getElementById("caja").classList.add("spaceAround");
 }
 
-function columnReverseWrap(){
+function spaceEvenly(){
     borrarTodo();
-    document.getElementById("caja").classList.add("columnReverseWrap");
+    document.getElementById("caja").classList.add("spaceEvenly");
 }
 
 function borrarTodo() {
-    document.getElementById("caja").classList.remove("rowWrap");
-    document.getElementById("caja").classList.remove("rowNoWrap");
-    document.getElementById("caja").classList.remove("rowWrapReverse");
-    document.getElementById("caja").classList.remove("rowReverseWrap");
-    document.getElementById("caja").classList.remove("rowReverseNoWrap");
-    document.getElementById("caja").classList.remove("rowReverseWrapReverse");
-    document.getElementById("caja").classList.remove("columnWrap");
-    document.getElementById("caja").classList.remove("columnNoWrap");
-    document.getElementById("caja").classList.remove("columnWrapReverse");
-    document.getElementById("caja").classList.remove("columnReverseWrap");
+    document.getElementById("caja").classList.remove("flexStart");
+    document.getElementById("caja").classList.remove("flexEnd");
+    document.getElementById("caja").classList.remove("start");
+    document.getElementById("caja").classList.remove("end");
+    document.getElementById("caja").classList.remove("left");
+    document.getElementById("caja").classList.remove("right");
+    document.getElementById("caja").classList.remove("center");
+    document.getElementById("caja").classList.remove("spaceBetween");
+    document.getElementById("caja").classList.remove("spaceAround");
+    document.getElementById("caja").classList.remove("spaceEvenly");
 }
 
 window.onload = function(){
-    document.getElementById("a").addEventListener("click",rowWrap);
-    document.getElementById("b").addEventListener("click",rowNoWrap);
-    document.getElementById("c").addEventListener("click",rowWrapReverse);
-    document.getElementById("d").addEventListener("click",rowReverseWrap);
-    document.getElementById("e").addEventListener("click",rowReverseNoWrap);
-    document.getElementById("f").addEventListener("click",rowReverseWrapReverse);
-    document.getElementById("g").addEventListener("click",columnWrap);
-    document.getElementById("h").addEventListener("click",columnNoWrap);
-    document.getElementById("i").addEventListener("click",columnWrapReverse);
-    document.getElementById("j").addEventListener("click",columnReverseWrap);
+    document.getElementById("a").addEventListener("click",flexStart);
+    document.getElementById("b").addEventListener("click",flexEnd);
+    document.getElementById("c").addEventListener("click",start);
+    document.getElementById("d").addEventListener("click",end);
+    document.getElementById("e").addEventListener("click",left);
+    document.getElementById("f").addEventListener("click",rigth);
+    document.getElementById("g").addEventListener("click",center);
+    document.getElementById("h").addEventListener("click",spaceBetween);
+    document.getElementById("i").addEventListener("click",spaceAround);
+    document.getElementById("j").addEventListener("click",spaceEvenly);
 }
