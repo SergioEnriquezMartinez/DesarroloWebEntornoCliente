@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+html, body {
+    height: 100%;
+}
+
+#caja{
+    background-color: aquamarine;
+    display: flex;
+    height: 700px;
+}
+
+.gap {
+    gap: 200px;
+}
+
+.row-gap {
+    row-gap: 200px;
+}
+
+.column-gap {
+    column-gap: 200px;
+}
+
+.cuadro{
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    height: 25px;
+    width: 250px;
+}
