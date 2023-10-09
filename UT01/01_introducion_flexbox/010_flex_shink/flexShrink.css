@@ -11,8 +11,8 @@ html, body{
     display: flex;
 }
 
-.flex {
-    flex: 1 2 3;
+.shrink {
+    flex-shrink: 2;
 }
 
 .cuadro{

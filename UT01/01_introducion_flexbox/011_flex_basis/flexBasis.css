@@ -1,0 +1,27 @@
+*{
+    margin: opx;
+}
+
+html, body{
+    height: 100%;
+}
+
+#caja{
+    background-color: aquamarine;
+    display: flex;
+}
+
+.basis {
+    flex-basis: auto;
+}
+
+.cuadro{
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    height: 25px;
+    width: 250px;
+}
