@@ -76,7 +76,60 @@ function endsWith() {
 function reemplazarString() {
     let texto = "Esto es una estructura estática";
     let reemplazado = texto.replace("st", "xxtt");
+    let reemplazadoTodo = texto.replaceAll("st", "SSTT");
     console.log("El texto reemplazado es : " + reemplazado);
+    console.log("El texto reemplazado es : " + reemplazadoTodo);
+}
+
+function stringPrimitivoObjeto() {
+    let cadenaUno = "Esto es una cadena como un tipo primitivo"; //Cadena como tipos primitivos
+    let cadenaDos = new String("Esto es una cadena como un objeto");
+    console.log(typeof cadenaUno);
+    console.log(typeof cadenaDos);
+}
+
+function eliminaEspaciosPrincipioFinal() {
+    let textoConEspacios = "    hola     ";
+    let textoSinEspacios = textoConEspacios.trim();
+    console.log("inicio ---->" + textoConEspacios + "<---- fin");
+    console.log("inicio ---->" + textoSinEspacios + "<---- fin");
+}
+
+function extraeSlice() {
+    let textoDatos = "0123456789ABCDEF";
+    let textoCon1 = textoDatos.slice(0,1); //El primer dato es la posicion en la que queremos que empiece y el segundo la posicion hasta la que queremos llegar (incluida)
+    let textoCon2 = textoDatos.slice(0,2);
+    let textoCon3 = textoDatos.slice(0,3);
+    let texto3_10 = textoDatos.slice(3,10);
+    let textoConFinal = textoDatos.slice(3,-5);
+    console.log("De 0 a 1  --> " + textoCon1);
+    console.log("De 0 a 2  --> " + textoCon2);
+    console.log("De 0 a 3  --> " + textoCon3);
+    console.log("De 3 a 10 --> " + texto3_10);
+    console.log("De 3 a -5 --> " + textoConFinal);
+    console.log("Cadena completa: " + textoDatos);
+}
+
+function extraeConSubstring() {
+    let textoDatos = "0123456789ABCDEF";
+    let textoSubstring = textoDatos.substring(0,2);
+    let textoSubstring2 = textoDatos.substring(3,10);
+    console.log("De 0 a 2  --> " + textoSubstring);
+    console.log("De 3 a 10 --> " + textoSubstring2);
+    console.log("Cadena completa: " + textoDatos);
+}
+
+function convertirArraySplit() {
+    let cadena = "uno dos tres cuatro cinco seis";
+    let conversion = cadena.split(" ");     //Si pasamos 1 parametro se trata del delimitiador que queramos que sea el caracter que se usa como divisor de la cadena
+    let conversion2 = cadena.split(" ", 3); //Si pasamos 2 parametros el segundo es el limite de divisiones que queremos que haga, es decir, cuanto queremos que almacene en el array
+    console.log(cadena);
+    console.log(conversion);
+    console.log(conversion2);
+}
+
+function convertirCodigoTexto() {
+    console.log(String.fromCharCode(65,66,67));
 }
 
 window.onload = function() {
@@ -93,4 +146,10 @@ window.onload = function() {
     document.getElementById("busquedaFinal").addEventListener("click", busquedaFinal);
     document.getElementById("terminaEn").addEventListener("click", endsWith);
     document.getElementById("reemplazarString").addEventListener("click", reemplazarString);
+    document.getElementById("stringPrimitivoYObjeto").addEventListener("click", stringPrimitivoObjeto);
+    document.getElementById("eliminaPrincipioFinal").addEventListener("click", eliminaEspaciosPrincipioFinal);
+    document.getElementById("extraeConSlice").addEventListener("click", extraeSlice);
+    document.getElementById("extraeConSubstring").addEventListener("click", extraeConSubstring);
+    document.getElementById("convertirArraySplit").addEventListener("click", convertirArraySplit);
+    document.getElementById("convertirCodigoTexto").addEventListener("click", convertirCodigoTexto);
 }
