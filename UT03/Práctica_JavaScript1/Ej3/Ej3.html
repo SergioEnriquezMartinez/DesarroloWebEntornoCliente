@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Ej3.js"></script>
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <p>Selecciona una de las siguientes opciones para ver como las evalua JavaScript</p>
+
+    <select name="booleanos" id="booleanos" onchange="evaluacionBooleanos()">
+        <option value="true">True</option>
+        <option value="false">False</option>
+        <option value="1">1</option>
+        <option value="0">0</option>
+        <option value="hola">Hola</option>
+        <option value="">'' (cadena vacia)</option>
+        <option value="NaN">NaN</option>
+        <option value="undefined">Undefined</option>
+        <option value="infinity">Infinity</option>
+        <option value="null">Null</option>
+    </select>
+
+    <p>El resultado de la evaluación es el siguiente</p>
+    <p id="resultado"></p>
+</body>
+</html>

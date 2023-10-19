@@ -1,13 +1,18 @@
-document.getElementById("mostrarCara").addEventListener("click", function () {
+function dibujarCara() {
     var cara = `
-    _________
-    |''''''''''''''| 
-    | 0     0  |
-    |     v     |
-    |  _____  |
-    | (_____) |
-    |________|
-    `;
+    _________ 
+    |0        0|\r
+    |     v     |\r
+    | ------- |\r
+    |________|\r
+        `;
+    
+        alert(cara);
+}
 
-    alert(cara);
-});
+window.onload = function() {
+    dibujarCara();
+}
+
+//Lo he intentado pero no he sido capaz de hacerla mas bonita
+//Lo he intentado con \t pero las tabulaciones las mete con una flechita (singo de la tabulación en el teclado)
