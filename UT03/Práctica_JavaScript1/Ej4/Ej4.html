@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Ej4.js"></script>
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <select name="primerOperador" id="primerOperador">
+        <option value="2">2</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+    </select>
+
+    <select name="comparador" id="comparador">
+        <option value="mayor">></option>
+        <option value="menor"><</option>
+        <option value="mayorIgual">>=</option>
+        <option value="menorIgual"><=</option>
+        <option value="igualIgual">==</option>
+        <option value="diferente">!=</option>
+        <option value="igualEstricto">===</option>
+    </select>
+
+    <select name="segundoOperador" id="segundoOperador">
+        <option value="2">2</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+    </select>
+    <button id="enviar" onclick="comparacion()">Enviar</button>
+
+    <p id="resultado"></p>
+</body>
+</html>
