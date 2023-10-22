@@ -1,38 +1,36 @@
 function comparacion() {
     let primerOperador = document.getElementById("primerOperador");
-    let primerOperadorSeleccionado = primerOperador.options[primerOperador.selectedIndex].textContent;
-    let primerOperadorNumero=parseInt(primerOperador);
+    let primerOperadorSeleccionado = parseInt(primerOperador.options[primerOperador.selectedIndex].textContent);
     
     let comparador = document.getElementById("comparador");
     let comparadorSeleccionado = comparador.options[comparador.selectedIndex].textContent;
     
     let segundoOperador = document.getElementById("segundoOperador");
-    let segundoOperadorSeleccionado = segundoOperador.options[segundoOperador.selectedIndex].textContent;
-    let segundoOperadorNumero=parseInt(segundoOperador);
+    let segundoOperadorSeleccionado = parseInt(segundoOperador.options[segundoOperador.selectedIndex].textContent);
 
     let resultado = null;
 
     switch (comparadorSeleccionado) {
         case '>':
-            resultado = primerOperadorNumero > segundoOperadorNumero;
+            resultado = (primerOperadorSeleccionado > segundoOperadorSeleccionado);
             break;
         case '<':
-            resultado = primerOperadorNumero < segundoOperadorNumero;
+            resultado = (primerOperadorSeleccionado < segundoOperadorSeleccionado);
             break;
         case '>=':
-            resultado = primerOperadorNumero >= segundoOperadorNumero;
+            resultado = (primerOperadorSeleccionado >= segundoOperadorSeleccionado);
             break;
         case '<=':
-            resultado = primerOperadorNumero <= segundoOperadorNumero;
+            resultado = (primerOperadorSeleccionado <= segundoOperadorSeleccionado);
             break;        
         case '==':
-            resultado = primerOperadorNumero == segundoOperadorNumero;
+            resultado = (primerOperadorSeleccionado == segundoOperadorSeleccionado);
             break;
         case '!=':
-            resultado = primerOperadorNumero != segundoOperadorNumero;
+            resultado = (primerOperadorSeleccionado != segundoOperadorSeleccionado);
             break;
         case '===':
-            resultado = primerOperadorNumero === segundoOperadorNumero;
+            resultado = (primerOperadorSeleccionado === segundoOperadorSeleccionado);
             break;
     }
     
