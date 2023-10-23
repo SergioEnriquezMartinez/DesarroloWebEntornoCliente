@@ -38,3 +38,7 @@ function comparacion() {
     rs.textContent = `El resultado de la comparacion es: ${resultado}`;
 
 }
+
+window.onload = function() {
+    document.getElementById("enviar").addEventListener("click",comparacion);
+}

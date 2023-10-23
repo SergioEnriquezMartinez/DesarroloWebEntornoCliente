@@ -13,5 +13,9 @@ function evaluacionBooleanos() {
     resultado.textContent = `La opción ${seleccionBooleanos} es evaluada como ${boolSeleccion}`;
 }
 
+window.onload = function() {
+    document.getElementById("booleanos").addEventListener("change",evaluacionBooleanos);
+}
+
 /*He necesitado hacer un condicional porque el .value siempre te devuelve un objeto String
 cuando recoges datos de <select>*/
