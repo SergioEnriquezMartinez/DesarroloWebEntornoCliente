@@ -1,42 +1,42 @@
 function generarCaracteres() {
-  alert("hola");
-  let rs;
-
-  for (let i = 0; i < 15; i++) {
-    let aleatorio = parseInt(Math.random() * 16);
-
-    if (aleatorio >= 1 && aleatorio <= 9) {
-      rs = aleatorio;
+  
+  let contador = 0, aleatorio = 0, resultado = "", cadena = "";
+  
+  do {
+    aleatorio = Math.floor(Math.random() * 16);
+    if (aleatorio >= 0 && aleatorio < 10) {
+      cadena = aleatorio.toString();
     } else {
       switch (aleatorio) {
         case 10:
-          rs = "A";
+          cadena = "A";
           break;
         case 11:
-          rs = "B";
+          cadena = "B";
           break;
         case 12:
-          rs = "C";
+          cadena = "C";
           break;
         case 13:
-          rs = "D";
+          cadena = "D";
           break;
         case 14:
-          rs = "E";
+          cadena = "E";
           break;
         case 15:
-          rs = "F";
+          cadena = "F";
           break;
       }
     }
-  }
 
-  let resultado = document.getElementById("resultado");
-  rs.textContent = resultado;
+    if(!resultado.includes(cadena)) {
+      resultado += cadena + " ";
+      contador++;
+    }
+  } while (contador < 16);
+  document.getElementById("resultado").textContent = resultado;
 }
 
 window.onload = function () {
-  document
-    .getElementById("generar")
-    .addEventListener("click", generarCaracteres);
-};
+  document.getElementById("generar").addEventListener("click",generarCaracteres);
+}
