@@ -86,6 +86,47 @@ function invertirOrdenArray() {
     console.log(dias.reverse("Jueves"));
 }
 
+function ordenarArraySort() {
+    const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+    dias.sort();
+    console.log(dias);
+}
+
+function ordenarArraySortPalabra() {
+    const palabra = ["Ñu", "Águila", "boa", "oso", "marsopa", "NUTRIA"];
+    palabra.sort();
+    console.log(palabra);
+}
+
+function asignarValorVariable() {
+    let [saludo, despedida, cierre] = ["Hola", "Adiós", "Cierre"];
+    console.log(saludo);
+    console.log(despedida);
+    console.log(cierre);
+}
+
+function intercambioValores() {
+    let [n1, n2] = [10, Math.random() * 10];
+    console.log(n1 + "--" + n2);
+    let a = 9;
+    let b = 1;
+    console.log(a + "--" + b);
+    [a, b] = [b, a];
+    console.log(a + "--" + b);
+}
+
+function operardorPropagacion() {
+    let array = [1,2,3];
+    let [x,y,z] = [...array];
+    console.log(array);
+    console.log(x + " ---> " + y + " ---> " + z);
+    let [f,,g] = [...array];
+    console.log(f + " ---> " + g);
+    let a,b;
+    [a,b,...array] = [1,2,3,4,5];
+    console.log(a + " ---> " + b + " --->" + array);
+}
+
 window.onload = function () {
     document.getElementById("tamanioArray").addEventListener("click", tamanioArray);
     document.getElementById("aniadirElementoFinalLength").addEventListener("click", aniadirElementoFinalLength);
@@ -102,4 +143,9 @@ window.onload = function () {
     document.getElementById("busquedaEnArrayConLastIndexOf").addEventListener("click", busquedaEnArrayConLastIndexOf);
     document.getElementById("busquedaConIncludesArray").addEventListener("click", busquedaConIncludesArray);
     document.getElementById("invertirOrdenArray").addEventListener("click", invertirOrdenArray);
+    document.getElementById("ordenarArraySort").addEventListener("click", ordenarArraySort);
+    document.getElementById("ordenarArraySortPalabra").addEventListener("click", ordenarArraySortPalabra);
+    document.getElementById("asignarValorVariable").addEventListener("click", asignarValorVariable);
+    document.getElementById("intercambioValores").addEventListener("click", intercambioValores);
+    document.getElementById("operadorPropagacion").addEventListener("click", operardorPropagacion);
 }
