@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+#carton {
+    width: 100%;
+    padding: 0px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.columnas {
+    width: 11.11%;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.cuadrados {
+    background-color: lightgreen;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulos {
+    background-color: green;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+}
