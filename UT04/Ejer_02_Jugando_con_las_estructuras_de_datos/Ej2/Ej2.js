@@ -13,6 +13,12 @@ function numeroCasillas() {
     return numCasillas;
 }
 
+function generarHuecos() {
+    let huecosRellenos = numeroCasillas();
+    let huecosVacios = 3 - huecosRellenos;
+    
+}
+
 function generarCarton() {
     const numeros = new Array();
     let num;
@@ -22,7 +28,6 @@ function generarCarton() {
         do {
             if(generarSiNo()) {
                 num = generarNumeros() + (i * 10);
-                numeros.sort(); //PROVISIONAL NO SE SI FUNCIONA AQUI
             } else {
                 num = 0;
             }
@@ -33,5 +38,5 @@ function generarCarton() {
 }
 
 window.onload = function() {
-
+    generarCarton();
 }
