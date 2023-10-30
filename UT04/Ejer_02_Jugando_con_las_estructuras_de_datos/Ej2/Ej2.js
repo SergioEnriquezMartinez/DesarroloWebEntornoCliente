@@ -16,14 +16,18 @@ function numeroCasillas() {
 function generarCarton() {
     const numeros = new Array();
     let num;
+    let c = 0;
     for (let i = 0; i < 9; i++) {
         let numCasillas = numeroCasillas();
         do {
             if(generarSiNo()) {
                 num = generarNumeros() + (i * 10);
-                numeros.push(num);
+                numeros.sort(); //PROVISIONAL NO SE SI FUNCIONA AQUI
+            } else {
+                num = 0;
             }
-            numeros.sort;
+            numeros.push(num);
+            c++;
         } while (c < numCasillas);
     }
 }
