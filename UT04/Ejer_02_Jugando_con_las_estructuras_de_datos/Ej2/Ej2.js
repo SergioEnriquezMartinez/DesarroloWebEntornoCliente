@@ -25,7 +25,7 @@ function escogerNumeros(matrizNumeros) {
     return num;
 }
 
-function generarHuecos(num) {
+function borrarNumeros(num) {
     let rHuecos = Math.floor(Math.random() * (2 - 1 + 1) + 1);
     let contador = 0;
     do {
@@ -36,10 +36,10 @@ function generarHuecos(num) {
     return num;
 }
 
-function pintar(num) {
+function pintar() {
     
 }
 
 window.onload = function() {
-    
+    pintar();
 }
