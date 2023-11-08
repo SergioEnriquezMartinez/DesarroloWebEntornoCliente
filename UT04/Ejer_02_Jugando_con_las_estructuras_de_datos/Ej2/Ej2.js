@@ -22,6 +22,7 @@ function escogerNumeros(matrizNumeros) {
         }
     } while (contador < 4);
     num.sort();
+    return num;
 }
 
 function generarHuecos(num) {
@@ -32,6 +33,11 @@ function generarHuecos(num) {
             
         }
     } while (contador < rHuecos);
+    return num;
+}
+
+function pintar(num) {
+    
 }
 
 window.onload = function() {
