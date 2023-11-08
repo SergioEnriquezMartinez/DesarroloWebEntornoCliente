@@ -15,7 +15,19 @@ function laPilaDeFunciones() {
     f1();
 }
 
+function desbordamientoDeLaPila() {
+    function saludo() {
+        console.log("Saludo");
+        despedida();
+    }
+    function despedida() {
+        console.log("Despedida");
+        saludo();
+    }
+    saludo();
+}
 
 window.onload = function() {
     document.getElementById("laPilaDeFunciones").addEventListener("click", laPilaDeFunciones);
+    document.getElementById("desbordamientoDeLaPila").addEventListener("click", desbordamientoPila);
 }
