@@ -3,7 +3,7 @@
 }
 
 html {
-    background-color: blueviolet;
+    background-color: chartreuse;
 }
 
 body {
@@ -30,12 +30,28 @@ body {
     width: 70px;
     height: 70px;
 }
+#container {
+    display: flex;
+    justify-content: center;
+}
 
 #tablero {
     display: flex;
     text-align: center;
 }
 
-#tablero div {
-    background-color: yellowgreen;
+.barquito5 {
+    background-image: url(img/barquito5.jpeg);
+}
+
+.barquito4 {
+    background-image: url(img/barquito4.jpeg);
+}
+
+.barquito3 {
+    background-image: url(img/barquito3.jpeg);
+}
+
+.aguitaDelDemonio {
+    background-image: url(img/aguitaDelDemonio.jpg);
 }

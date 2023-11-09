@@ -9,27 +9,28 @@ function construirArray() {
       matriz[j][k] = `${j}-${k}`;
     }
   }
-  console.log(matriz);
   return matriz;
 }
 
 function mostrarArray(matriz) {
-  for (let i = 0; i < matriz.length; i++) {
-    const columna = document.createElement("div");
-    columna.id = i;
-
-    for (let j = 0; j < matriz[i].length; j++) {
-      const celda = document.createElement("div");
-      celda.id = `${i}${j}`;
-      celda.classList.add("bordeCelda");
-      columna.appendChild(celda);
+  if (matriz) {
+    for (let i = 0; i < matriz.length; i++) {
+      const columna = document.createElement("div");
+      columna.id = i;
+  
+      for (let j = 0; j < matriz[i].length; j++) {
+        const celda = document.createElement("div");
+        celda.id = `${i}${j}`;
+        celda.classList.add("bordeCelda");
+        columna.appendChild(celda);
+      }
+      document.getElementById("tablero").appendChild(columna);
     }
-    document.getElementById("tablero").appendChild(columna);
   }
 }
 
 function generarBarcos(tamanio) {
-  let barco = new Array(tamanio);
+  let barco = new Array(tamanio).fill(null);
   return barco;
 }
 
@@ -50,42 +51,90 @@ function posicionarBarcos(barco) {
       barco[i] = `${posicionI + i}-${posicionJ}`;
     }
   }
-  console.log(barco);
+  return barco;
 }
 
 function colisiones(barcos, tamanio) {
-    let colision;
-    do {
-      let barcoNuevo = generarBarcos(tamanio);
-      colision = false;
-      for (let i = 0; i < barcos.length; i++) {
-        for (let j = 0; j < barcos[i].length; j++) {
-          colision = barcoNuevo.includes(barcos[i][j]);
-          if (colision) break;
+  let colision;
+  let barcoNuevo;
+  do {
+    barcoNuevo = posicionarBarcos(generarBarcos(tamanio));
+    colision = false;
+
+    for (let i = 0; i < barcos.length; i++) {
+      for (let j = 0; j < barcos[i].length; j++) {
+        if (barcoNuevo.includes(barcos[i][j]) || barcos[i].includes(barcoNuevo[j])) {
+          colision = true;
+          break;
         }
       }
-    } while (colision);
-    return barcoNuevo;
-  }
+    }
+  } while (colision);
+  return barcoNuevo;
+}
 
-  function rellenarBarcos() {
-    let barco5 = generarBarcos(5);
-    let barco4 = colisiones([barco5], 4);
-    let barco3 = colisiones([barco5, barco4], 3);
-    console.log(barco5);
-    console.log(barco4);
-    console.log(barco3);
+
+function rellenarBarcos(matriz) {
+  let barco5 = posicionarBarcos(generarBarcos(5));
+  let barco4 = colisiones([barco5], 4);
+  let barco3 = colisiones([barco5, barco4], 3);
+
+  let cont5 = 0, cont4 = 0, cont3 = 0;
+
+  for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+      if (matriz[i][j] == barco5[cont5]) {
+        matriz[i][j] = "Barco5";
+        if (cont5 < 4) cont5++;
+      } else if (matriz[i][j] == barco4[cont4]) {
+        matriz[i][j] = "Barco4";
+        if (cont4 < 3) cont4++;
+      } else if (matriz[i][j] == barco3[cont3]) {
+        matriz[i][j] = "Barco3";
+        if (cont3 < 2) cont3++;
+      }
+    }
   }
+  pintarBarcos(matriz);
+  return matriz;
+}
+
+function pintarBarcos(matriz) {
+  for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+      let div = document.getElementById(`${i}${j}`);
+      console.log(`${i}${j}`);
+      if (matriz[i][j] == "Barco5") {
+        div.addEventListener("click", () => ponerBarco5(`${i}${j}`));
+      } else if (matriz[i][j] == "Barco4") {
+        div.addEventListener("click", () => ponerBarco4(`${i}${j}`));
+      } else if (matriz[i][j] == "Barco3") {
+        div.addEventListener("click", () => ponerBarco3(`${i}${j}`));
+      } else {
+        div.addEventListener("click", () => ponerAgua(`${i}${j}`));
+      }
+    }
+  }
+}
+
+function ponerBarco5(idDiv) {
+  document.getElementById(idDiv).classList.add("barquito5");
+}
+
+function ponerBarco4(idDiv) {
+  document.getElementById(idDiv).classList.add("barquito4");
+}
+
+function ponerBarco3(idDiv) {
+  document.getElementById(idDiv).classList.add("barquito3");
+}
+
+function ponerAgua(idDiv) {
+  document.getElementById(idDiv).classList.add("aguitaDelDemonio");
+}
 
 window.onload = function () {
-    rellenarBarcos();
-  document
-    .getElementById("construirArray")
-    .addEventListener("click", construirArray);
-  document
-    .getElementById("mostrarArray")
-    .addEventListener("click", mostrarArray(construirArray()));
-  document
-    .getElementById("rellenarBarcos")
-    .addEventListener("click", rellenarBarcos);
+  document.getElementById("construirArray").addEventListener("click", construirArray);
+  document.getElementById("mostrarArray").addEventListener("click", function() {mostrarArray(construirArray());});
+  document.getElementById("rellenarBarcos").addEventListener("click", function() {rellenarBarcos(construirArray());});  
 };
