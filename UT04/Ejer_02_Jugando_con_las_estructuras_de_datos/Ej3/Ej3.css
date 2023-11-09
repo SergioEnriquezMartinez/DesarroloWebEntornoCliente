@@ -6,6 +6,10 @@ html {
     background-color: blueviolet;
 }
 
+body {
+    margin: 0 auto;
+}
+
 #botones {
     display: flex;
     flex-direction: row;
@@ -19,4 +23,19 @@ html {
     background-color: aquamarine;
     padding: 1%;
     font-size: 2rem;
+}
+
+.bordeCelda {
+    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+}
+
+#tablero {
+    display: flex;
+    text-align: center;
+}
+
+#tablero div {
+    background-color: yellowgreen;
 }
