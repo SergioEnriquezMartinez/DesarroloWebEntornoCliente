@@ -3,7 +3,7 @@
 }
 
 html {
-    background-color: chocolate;
+    background-color: turquoise;
     padding: 0;
 }
 
@@ -39,4 +39,8 @@ html {
     height: 150px;
     width: 150px;
     border: 1px solid black;
+    font-size: 3rem;
+    font-weight: bold;
+    display: grid;
+    align-content: center;
 }
