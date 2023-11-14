@@ -1,22 +1,19 @@
-function comparar() {
-    let c1 = prompt("Introduce cadena uno: ");
-    let c2 = prompt("Introduce cadena dos: ");
 
-    let resultado = ordenPersonal(c1,c2);
-    
-    if (resultado == o) {
+function comparar(){
+    let cadenaUno = prompt("Introduce cadena uno: ");
+    let cadenaDos = prompt("Introduce cadena dos: ");
+    let resultado = ordenPersonal(cadenaUno, cadenaDos);
+    if (resultado==0){
         alert("Las cadenas son iguales: " + resultado);
-    } else if (resultado > 0) {
-        alert("La cadena uno es mayor : " + resultado);
-    } else if (resultado < 0) {
-        alert("La cadena dos es mayor: " + resultado);
+    } else if (resultado >0){
+        alert("La cadenaUno es más larga: " + resultado);
+    } else{
+        alert("La cadenaDos es más larga: " + resultado);
     }
 }
-
-function ordenPersonal(a,b) {
+function ordenPersonal(a,b){
     return a.length-b.length;
 }
-
-window.onload = function() {
+window.onload = function(){
     document.getElementById("comparar").addEventListener("click", comparar);
 }
