@@ -1,0 +1,53 @@
+#container{
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cuadrado{
+    width: calc((100% - 30px) / 3);
+    flex: none;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carne{
+    background-color: blanchedalmond;
+}
+
+.azulClaro{
+    background-color: rgb(181, 191, 247);
+}
+
+.gris{
+    background-color: rgb(175, 172, 172);
+}
+
+.amarillo{
+    background-color: yellow;
+}
+
+.verde{
+    background-color: rgb(123, 241, 129);
+}
+
+.azul{
+    background-color: rgb(53, 134, 241);
+}
+
+.rojo{
+    background-color: red;
+}
+
+.naranja{
+    background-color: orange;
+}
+
+.rosa{
+    background-color: pink;
+}
+

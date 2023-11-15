@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(194, 236, 130);
+}
+
+#carreraTortuga{
+    text-align: center;
+    font-size: 40px;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+.moverse{
+    animation: mover 2.5s 1 ease-in;
+    transform: translate(55em, 0px);
+}
+
+@keyframes mover {
+    from{
+        transform: translate(10em,0px);
+    }
+    10%{
+        transform: translate(20em,0px);
+    }
+    20%{
+        transform: translate(30em,0px);
+    }
+    30%{
+        transform: translate(40em,0px);
+    }
+    to{
+        transform: translate(50em,0px);
+    }
+    
+}
+

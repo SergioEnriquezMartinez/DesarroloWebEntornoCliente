@@ -1,0 +1,19 @@
+*{
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(178, 201, 241);
+}
+
+#colocarBoton{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+}
+
+#aniadirImagen{
+    background-color: rgb(112, 112, 240);
+    font-size: 40px;
+    border-radius: 10%;
+}
+

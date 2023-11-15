@@ -4,7 +4,7 @@ function funcionFlecha() {
 }
 
 function funcionFlechaMasDeUnParametro() {
-    const media = (x, y) => (x + y ) / 2;
+    const media = (x, y) => (x + y) / 2;
     console.log(media(10, 20));
 }
 

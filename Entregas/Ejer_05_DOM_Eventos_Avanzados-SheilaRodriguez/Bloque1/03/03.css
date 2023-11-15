@@ -1,0 +1,16 @@
+
+#listaUno {
+    width: 40%;
+    background: #89d2e9;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#listaDos{
+    width: 40%;
+    background: #ee83e0;
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+}

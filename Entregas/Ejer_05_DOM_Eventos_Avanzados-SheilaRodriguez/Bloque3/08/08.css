@@ -1,0 +1,14 @@
+#sumasAleatorias{
+    text-align: center;
+}
+
+#error{
+    text-align: center;
+    color:red;
+}
+
+#info{
+    text-align: center;
+    font-size: 25px;
+    color:blue;
+}

@@ -1,0 +1,23 @@
+*{
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(241, 178, 241);
+}
+
+p{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+}
+
+img{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin:200px;
+}
+
+.munecoArriba{
+    border:1px solid black;
+}

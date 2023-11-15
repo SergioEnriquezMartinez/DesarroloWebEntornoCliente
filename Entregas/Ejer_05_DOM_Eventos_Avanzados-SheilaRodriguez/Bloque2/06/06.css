@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding:0px;
+    border:0px;
+}
+
+html, body{
+    height: 100%;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.semaforo{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.rojo{
+    background-color: rgb(243, 9, 9);
+}
+
+.rojoSemaforo{   
+    animation-name: parpadeoRojo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.naranja{
+    background-color: orange;
+}
+
+.naranjaSemaforo{
+    animation-name:parpadeoNaranja;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+.verde{
+    background-color: rgb(48, 172, 48);
+}
+
+.verdeSemaforo{
+    animation-name:parpadeoVerde;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+@keyframes parpadeoRojo {  
+    0% { 
+        background: linear-gradient(rgb(243, 159, 159), rgb(243,159, 159));
+    }
+}
+
+@keyframes parpadeoVerde {  
+    0% { 
+        background: linear-gradient(rgb(173, 255, 47), rgb(173, 255, 47));
+    }
+}
+
+@keyframes parpadeoNaranja {  
+    0% { 
+        background: linear-gradient(rgb(255, 189, 47), rgb(255, 189, 47));
+    }
+}
