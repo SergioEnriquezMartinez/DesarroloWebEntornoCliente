@@ -1,17 +1,17 @@
 function funcionTradicional() {
-    document.getElementById("resultadoTradicional").textContent = "Función tradicional --> " + Math.PI;
+    document.getElementById("resultadoTradicional").textContent = "Función tradicional -> " + Math.PI;
 }
 
 function funcionAnonima() {
     let result = function() {
-        return "Función anónima --> " + Math.PI;
+        return "Función anónima -> " + Math.PI;
     };
     document.getElementById("resultadoAnonima").textContent = result();
 }
 
 function funcionFlecha () {
     let result = () => {
-        return "Función flecha --> " + Math.PI;
+        return "Función flecha -> " + Math.PI;
     };
     document.getElementById("resultadoFlecha").textContent = result();
 }
