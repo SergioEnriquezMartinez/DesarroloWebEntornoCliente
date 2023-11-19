@@ -11,12 +11,21 @@ function funcionAnonima() {
     let base = parseInt(document.getElementById("base").value);
     let altura = parseInt(document.getElementById("altura").value);
 
+    let result = function() {
+        return base * altura;
+    }
+    document.getElementById("resultadoAnonima").textContent = result();
 }
 
 function funcionFlecha() {
     let base = parseInt(document.getElementById("base").value);
     let altura = parseInt(document.getElementById("altura").value);
 
+    let result = () => {
+        return base * altura;
+    }
+
+    document.getElementById("resultadoFlecha").textContent = result();
 }
 
 window.onload = function() {

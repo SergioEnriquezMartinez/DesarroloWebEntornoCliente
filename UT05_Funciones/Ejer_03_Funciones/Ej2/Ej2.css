@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: brown;
+    color: yellow;
+    font-size: 2rem;
+}
+
+#formulario {
+    width: 100%;
+    text-align: center;
+}
+
+#llamadas {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#resultados {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#resultados div {
+    text-align: center;
+    align-items: center;
+    width: 20%;
+    background-color: aqua;
+    color: tomato;
+    height: 50px;
+    border-radius: 50%;
+}
