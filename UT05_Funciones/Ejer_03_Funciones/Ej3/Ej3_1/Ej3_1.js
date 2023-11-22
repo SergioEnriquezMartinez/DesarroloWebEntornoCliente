@@ -8,7 +8,7 @@ function funcionVariable() {
 function variableBucle() {
     for (let i = 0; i < 5; i++) {
         let x = "Esto es una variable dentro de un bucle";
-        document.getElementById("rBucle").textContent += x + " " + i;
+        document.getElementById("rBucle").textContent += x + " " + i + "\n";
     }
 }
 window.onload = function() {
