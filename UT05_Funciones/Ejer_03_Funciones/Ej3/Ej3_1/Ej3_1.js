@@ -6,9 +6,9 @@ function funcionVariable() {
 }
 
 function variableBucle() {
-    for (let x = 0; x < 5; x++) {
+    for (let i = 0; i < 5; i++) {
         let x = "Esto es una variable dentro de un bucle";
-        document.getElementById("rBucle").textContent += x + " ";
+        document.getElementById("rBucle").textContent += x + " " + i;
     }
 }
 window.onload = function() {
