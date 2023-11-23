@@ -41,11 +41,29 @@ function ordenarArray(array) {
 }
 
 function desordenarArray(array) {
-    
+    for (let i = array.length - 1; i > 0; i--) {
+        const r = Math.floor(Math.random() * (i + 1));
+
+        const aux = array[i];
+        array[i] = array[r];
+        array[r] = aux;
+    }
+    return array;
+}
+
+function llamarFunciones() {
+    let creado = crearArray();
+    let rellenado = rellenarArray(creado);
+    document.getElementById("aleatorio").textContent = rellenado;
+    let ordenado = ordenarArray(rellenado);
+    document.getElementById("ordenado").textContent = ordenado;
+    let desordenado = desordenarArray(ordenado);
+    document.getElementById("desordenado").textContent = desordenado;
 }
 
 window.onload = function() {
     document.getElementById("vGlobal").addEventListener("click",() => {document.getElementById("rGlobal").textContent = x});
     document.getElementById("vFuncion").addEventListener("click",funcionVariable);
     document.getElementById("vBucle").addEventListener("click",variableBucle);
+    document.getElementById("generarArray").addEventListener("click",llamarFunciones);
 }
