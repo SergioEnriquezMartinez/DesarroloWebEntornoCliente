@@ -1,0 +1,17 @@
+Objetivo:
+Crear un programa que resuelva un tablero de Sudoku y permita a los jugadores jugar interactuando con él.
+
+Requisitos:
+
+Representa el tablero de Sudoku como una matriz 9x9.
+Inicializa el tablero con algunos números predefinidos para formar el puzzle inicial.
+Permite al jugador realizar movimientos ingresando números en celdas vacías, cumpliendo con las reglas del Sudoku (ningún número repetido en la misma fila, columna o subcuadrícula 3x3).
+Proporciona una función para verificar si el tablero está completamente lleno y es una solución válida.
+Proporciona una función que resuelva automáticamente el Sudoku utilizando un algoritmo adecuado.
+Pistas:
+
+Puedes representar el tablero como una matriz 2D.
+Utiliza funciones para realizar diferentes acciones del juego, como verificar la validez de un movimiento, completar automáticamente el Sudoku, etc.
+Puedes imprimir el tablero en la consola para mostrar el estado actual del juego después de cada movimiento.
+Desafío adicional:
+Implementa un algoritmo de generación de tablero que cree un puzzle de Sudoku válido y luego permite a los jugadores resolverlo.

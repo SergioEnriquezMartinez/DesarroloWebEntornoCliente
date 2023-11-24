@@ -1,0 +1,19 @@
+Objetivo:
+Crear una versión básica del juego de Buscaminas.
+
+Requisitos:
+
+Representa el tablero del Buscaminas como una matriz 2D de celdas, donde cada celda puede contener una mina o un número que indica la cantidad de minas adyacentes.
+Coloca aleatoriamente un número predeterminado de minas en el tablero al inicio del juego.
+Permite al jugador realizar movimientos seleccionando una celda para revelar su contenido.
+Si una celda contiene una mina, el juego termina.
+Si una celda no contiene una mina, se revela su número (indicando la cantidad de minas adyacentes).
+Si una celda no contiene minas adyacentes, se revelan automáticamente todas las celdas vecinas hasta llegar a aquellas que tienen minas cercanas.
+El juego termina cuando todas las celdas sin minas han sido reveladas o cuando se revela una celda con una mina.
+Pistas:
+
+Utiliza una matriz 2D para representar el tablero.
+Utiliza funciones para inicializar el tablero, colocar minas, revelar celdas y verificar el estado del juego.
+Puedes imprimir el tablero en la consola para mostrar el estado actual del juego después de cada movimiento.
+Desafío adicional:
+Añade una interfaz gráfica simple para el juego utilizando HTML y CSS.

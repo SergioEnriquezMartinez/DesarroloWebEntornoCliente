@@ -1,0 +1,19 @@
+Objetivo:
+Implementar un juego de 4 en línea en JavaScript utilizando matrices y arrays para representar el tablero y las fichas.
+
+Requisitos:
+
+El tablero del juego será representado por una matriz de 6 filas y 7 columnas.
+Habrá dos jugadores, representados por dos fichas diferentes (por ejemplo, "X" y "O").
+Los jugadores se turnarán para colocar sus fichas en una columna del tablero.
+La ficha se colocará en la fila más baja disponible en la columna seleccionada.
+El juego detectará si hay cuatro fichas consecutivas del mismo jugador en horizontal, vertical o diagonal.
+Si se completa una fila de cuatro fichas del mismo jugador, el juego terminará y se declarará al jugador como ganador.
+Si no hay más movimientos posibles y no hay un ganador, el juego terminará en empate.
+Pistas:
+
+Puedes representar el tablero como una matriz (por ejemplo, una matriz de 6x7).
+Puedes usar funciones para realizar diferentes acciones del juego, como colocar una ficha, verificar el estado del tablero, etc.
+Puedes imprimir el tablero en la consola para mostrar el estado actual del juego después de cada movimiento.
+Desafío adicional:
+Añadir una interfaz de usuario básica que permita a los jugadores hacer clic en una columna para colocar sus fichas.
