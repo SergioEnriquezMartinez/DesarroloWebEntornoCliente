@@ -1,14 +1,13 @@
-function crearObjetoLlaves() {
+function crearConLlaves(){
     let punto = {
         x:19,
-        y:36,
+        y:35,
         mostrarCoordenadas:function(){
-            return `(${punto.x},${punto.y})`;
+            return `(${punto.x}, ${punto.y})`;
         }
     };
     console.log(punto.mostrarCoordenadas());
 }
-
-window.onload = function() {
-    document.getElementById("crearConLlaves").addEventListener("click",crearObjetoLlaves);
+window.onload = function(){
+    document.getElementById("crearConLalves").addEventListener("click", crearConLlaves);
 }
