@@ -18,20 +18,25 @@
                 </p>
                 <p>
                     <label for="operador">Introduce el operador</label>
-                    <input type="number" name="operador" id="operador">
+                    <input type="text" name="operador" id="operador">
                 </p>
                 <p>
                     <label for="segundoOperando">Introduce el segundo operando</label>
                     <input type="number" name="segundoOperando" id="segundoOperando">
                 </p>
                 <p>
-                    <input type="submit" value="Crear operación">
+                    <label for="resultadoEsperado">Introduce el resultado esperado</label>
+                    <input type="number" name="resultadoEsperado" id="resultadoEsperado">
+                </p>
+                <p>
+                    <input type="button" value="Enviar">
                 </p>
             </form>
         </section>
         <section id="resultado">
             <h2>Resultado</h2>
             <div id="resultadoOperacion"></div>
+            <div id="resutadoCorrecto"></div>
     </main>
 </body>
 </html>
