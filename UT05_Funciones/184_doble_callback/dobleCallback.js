@@ -19,7 +19,7 @@ function escribe(x, accion) {
 }
 
 window.onload = function () {
-    document.getElementById("dobleCallBack").addEventListener("click", dobleCallback);    
-    document.getElementById("dobleCallBackAnonima").addEventListener("click", dobleCallbackAnonima);    
-    document.getElementById("dobleCallBackFlecha").addEventListener("click", dobleCallbackFlecha);    
+    document.getElementById("dobleCallBack").addEventListener("click", dobleCallBack);    
+    document.getElementById("dobleCallBackAnonima").addEventListener("click", dobleCallBackAnonima);    
+    document.getElementById("dobleCallBackFlecha").addEventListener("click", dobleCallBackFlecha);    
 }

@@ -3,11 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Calculadora de Media</title>
+    <link rel="stylesheet" href="Ej5.css">
+    <script src="Ej5.js"></script>
 </head>
 <body>
     <main>
-        
+        <section>
+            <h1>Apartado 5.1</h1>
+            <h1>Calculadora de Media</h1>
+            <form id="formulario">
+                <p>
+                    <label for="numeros">Introduce los números separados por comas:</label>
+                    <input type="text" name="numeros" id="numeros" placeholder="Ejemplo: 1, 2, 3, 4, 5">
+                </p>
+                <p>
+                    <input type="button" value="Calcular Media" id="calcular">
+                </p>
+            </form>
+            <div id="resultado"></div>
+        </section>
+        <section>
+            <h1>Apartado 5.2</h1>
+            <form id="formulario2">
+                <p>Introduce los valores separados por un espacio</p>
+                <p>
+                    <label for="respuestas"></label>
+                    <input type="text" name="respuestas" id="respuestas" placeholder="Ejemplo: 150 300 2 true false true">
+                </p>
+                <p>
+                    <input type="button" value="Mostrar Datos" id="mostrarDatos">
+                </p>
+            </form>
+            <div id="datosVehiculo"></div>
+        </section>
     </main>
 </body>
 </html>

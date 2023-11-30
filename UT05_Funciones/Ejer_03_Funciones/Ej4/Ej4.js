@@ -6,10 +6,7 @@ function generarOperador(operador = ["+", "-", "*", "/"]) {
   return operador[Math.floor(Math.random() * operador.length)];
 }
 
-function generarOperacion() {
-  let operando1 = generarOperando();
-  let operando2 = generarOperando();
-  let operador = generarOperador();
+function generarOperacion(operando1, operando2, operador) {
   switch (operador) {
     case "+":
       operacion = operando1 + operando2;
@@ -31,12 +28,41 @@ function realizarOperacion() {
   let primerOperando = document.getElementById("primerOperando").value;
   let segundoOperando = document.getElementById("segundoOperando").value;
   let operador = document.getElementById("operador").value;
+  let resultadoEsperado = document.getElementById("resultadoEsperado").value;
 
-  let resultado = generarOperacion();
+  if (primerOperando == "") {
+    primerOperando = generarOperando();
+  } else {
+    primerOperando = parseInt(primerOperando);
+  }
+  if (segundoOperando == "") {
+    segundoOperando = generarOperando();
+  } else {
+    segundoOperando = parseInt(segundoOperando);
+  }
+  if (operador == "") {
+    operador = generarOperador();
+  } else {
+    operador = operador;
+  }
+  let resultado = generarOperacion(primerOperando, segundoOperando, operador);
   document.getElementById("resultadoOperacion").textContent = resultado;
+
+  if (resultadoEsperado == "") {
+    resultadoEsperado = resultado;
+  } else {
+    resultadoEsperado = parseInt(resultadoEsperado);
+  }
+
+  if (resultado == resultadoEsperado) {
+    document.getElementById("resultadoCorrecto").textContent = "Correcto";
+  } else {
+    document.getElementById("resultadoCorrecto").textContent = "Incorrecto";
+  }
+
+  console.log(resultado);
+  console.log(resultadoEsperado);
 }
 window.onload = function () {
-  document
-    .getElementById("formulario")
-    .addEventListener("click", () => realizarOperacion);
+  document.getElementById("botonEnviar").addEventListener("click",realizarOperacion);
 };

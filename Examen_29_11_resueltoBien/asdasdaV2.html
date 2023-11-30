@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script>
+    const listadoDeParejas = {
+      sistemaOperativo: 'fuchsia',
+      hardware: "m2",
+      redes: "redesWifi",
+      programacion: "dart",
+      fuchsia: 'sistemaOperativo',
+      dart: "programacion",
+      m2: "hardware",
+      "redesWifi": "redes"
+    }
+
+    const printColumns = () => {
+      Object.keys(listadoDeParejas).slice(0, 4).sort(() => Math.random() - 0.5).forEach((id) => {
+        const col1 = document.createElement('div');
+        col1.classList.add(`button`);
+        col1.setAttribute("id", id);
+        col1.textContent = id;
+        document.getElementById("col1").appendChild(col1);
+      });
+
+      Object.keys(listadoDeParejas).slice(4, 8).sort(() => Math.random() - 0.5).forEach((id) => {
+        const col2 = document.createElement('div');
+        col2.classList.add(`button`);
+        col2.setAttribute("id", id);
+        col2.textContent = id;
+        document.getElementById("col2").appendChild(col2);
+      })
+    }
+
+    window.onload = () => {
+      var selectedId = null;
+
+      document.getElementById('table').addEventListener('click', (event) => {
+        if (['table', 'col1', 'col2'].includes(event.target.id)) return;
+        if (event.target.className === 'button selected') return;
+
+        if (selectedId) {
+          if (listadoDeParejas[event.target.id] === selectedId) {
+            event.target.classList.add('selected');
+            alert("correcto")
+          } else {
+            document.getElementById(selectedId).classList.remove('selected');
+            alert("incorrecto")
+          }
+          selectedId = null;
+        } else {
+          event.target.classList.add('selected');
+          selectedId = event.target.id;
+        }
+      })
+
+      printColumns();
+    }
+  </script>
+  <style>
+    #table {
+      display: flex;
+    }
+
+    #col1,
+    #col2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .button {
+      border: 1px solid black;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    #sistemaOperativo.selected,
+    #fuchsia.selected {
+      background-color: green;
+    }
+
+    #hardware.selected,
+    #m2.selected {
+      background-color: red;
+    }
+
+    #programacion.selected,
+    #dart.selected {
+      background-color: blue;
+    }
+
+    #redes.selected,
+    #redesWifi.selected {
+      background-color: violet;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    Relaciona pinchando
+    <div id="table">
+      <div id="col1"></div>
+      <div id="col2"></div>
+    </div>
+  </div>
+</body>
+
+</html>
