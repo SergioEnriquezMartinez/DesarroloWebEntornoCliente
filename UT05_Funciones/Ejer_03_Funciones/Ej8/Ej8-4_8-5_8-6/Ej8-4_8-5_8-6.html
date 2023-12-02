@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Ej8-4_8-5_8-6.css">
+    <script src="Ej8-4_8-5_8-6.js"></script>
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Introduce un número para calcular su factorial</h1>
+            <form id="">
+                <input type="number" name="numero" id="numero">
+                <input type="button" value="Calcular Factorial" id="botonFactorial">
+                <input type="button" value="Calcular Fibonnacci" id="botonFibonnacci">
+            </form>
+            <div id="resultadoFactorial"></div>
+            <div id="resultadoFibonnacci"></div>
+        </section>
+        <section>
+            <h1>Selecciona una opción para visualizar de entre los numeros comprendidos entre 1 y 100</h1>
+            <select name="opciones" id="opciones">
+                <option value="" disabled selected>Elige una opción</option>
+                <option value="primos">Números primos</option>
+                <option value="pares">Números pares</option>
+                <option value="impares">Números impares</option>
+                <option value="tres">Números divisibles entre 3</option>
+                <option value="cuatro">Números divisibles entre 4</option>
+            </select>
+            <div id="resultadoFiltrado"></div>
+        </section>
+    </main>
+</body>
+</html>
