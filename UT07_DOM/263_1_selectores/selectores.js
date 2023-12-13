@@ -18,6 +18,16 @@ function cargarSelectoresCSS() {
     let primerVerdura = document.querySelectorAll("li.verdura:first-of-type");
     let arrayPrimerVerdura = [...primerVerdura];
     arrayPrimerVerdura.forEach(element => {console.log(element.textContent)});
+
+    console.log("--- Selecciona el atributo data-src ---");
+    let todosaAtributosDataSrc = document.querySelectorAll("li[data-src]");
+    let arrayTodosaAtributosDataSrc = [...todosaAtributosDataSrc];
+    arrayTodosaAtributosDataSrc.forEach(element => {console.log(element.textContent)});
+
+    console.log("--- Selecciona el atributo data-src igual al valorDos ---");
+    let atributosDataSrcValorDos = document.querySelectorAll("li[data-src='valorDos']");
+    let arrayAtributosDataSrcValorDos = [...atributosDataSrcValorDos];
+    arrayAtributosDataSrcValorDos.forEach(element => {console.log(element.textContent)});
 }
 
 
