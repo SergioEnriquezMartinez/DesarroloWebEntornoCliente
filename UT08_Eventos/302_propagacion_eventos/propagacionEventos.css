@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 50%;
+    width: 50%;
+    background-color: gray;
+}
+
+p {
+    height: 50%;
+    margin: 20px;
+    background-color: lightgray;
+}
+
+button {
+    margin: 20px;
+}
