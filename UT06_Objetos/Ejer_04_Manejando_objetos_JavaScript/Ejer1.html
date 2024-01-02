@@ -14,15 +14,16 @@
             <form id="formCrearCF">
                 <p>
                     <label for="codigo">Codigo Ciclo Formativo:</label>
-                    <input type="text" name="codigo" id="codigo">
+                    <input type="text" name="codigo" id="codigo" required>
                 </p>
                 <p>
                     <label for="nombre">Nombre Ciclo Formativo:</label>
-                    <input type="text" name="nombre" id="nombre">
+                    <input type="text" name="nombre" id="nombre" required>
                 </p>
                 <p>
                     <label for="grado">Grado Ciclo Formativo:</label>
-                    <select name="grado" id="grado">
+                    <select name="grado" id="grado" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
                         <option value="superior">Superior</option>
                         <option value="medio">Medio</option>
                         <option value="basico">Básico</option>
@@ -40,12 +41,29 @@
                     <label for="localidad">Localidad:</label>
                     <input type="text" name="localidad" id="localidad">
                 </p>
-                <div id="botones">
-                    <input type="button" value="Enviar Datos" id="botonEnviar">
-                    <input type="button" value="Buscar Datos" id="botonBuscar">
-                    <input type="button" value="Enviar Datos" id="boton">
-                </div>
             </form>
+            <div id="botones">
+                <input type="button" value="Crear Ciclo" id="botonCrear">
+                <input type="button" value="Buscar Ciclos" id="botonBuscar">
+                <input type="button" value="Mostrar Ciclos" id="botonMostrar">
+                <input type="button" value="Modificar Ciclo" id="botonModificar">
+            </div>
+            <div id="resultados">
+                <table id="tablaResults">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Grado</th>
+                            <th>Comunidad Autónoma</th>
+                            <th>Provincia</th>
+                            <th>Localidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaContenido">
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
 </body>
