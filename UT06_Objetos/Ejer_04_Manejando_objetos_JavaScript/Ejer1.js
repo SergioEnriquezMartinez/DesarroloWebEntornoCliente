@@ -74,25 +74,22 @@ function crearCiclo(){
     ciclosFormativos.push(ciclo);
 }
 
-function buscarCiclo(){
+function buscarCiclo() {
     let codigo = document.getElementById("codigo").value;
-
     let tabla = document.getElementById("tablaContenido");
 
     while (tabla.firstChild) {
         tabla.removeChild(tabla.firstChild);
     }
-    
+
     let ciclosEncontrados = [];
-    let encontrado = false;
-    let i = 0;
-    while(i < ciclosFormativos.length && !encontrado){
-        if(ciclosFormativos[i].getCodigo() == codigo){
-            encontrado = true;
+    
+    for (let i = 0; i < ciclosFormativos.length; i++) {
+        if (ciclosFormativos[i].getCodigo() == codigo) {
             ciclosEncontrados.push(ciclosFormativos[i]);
         }
-        i++;
     }
+
     mostrarCiclos(ciclosEncontrados);
 }
 
