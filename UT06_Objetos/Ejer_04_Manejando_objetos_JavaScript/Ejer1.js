@@ -45,11 +45,11 @@ class CicloFormativo {
 }
 
 const ciclosFormativos = [
-    new CicloFormativo("DAW", "Desarrollo de Aplicaciones Web", "Superior", "Castilla y León", "Ávila", "Ávila"),
-    new CicloFormativo("DAM", "Desarrollo de Aplicaciones Multiplataforma", "Superior", "Castilla y León", "Ávila", "Ávila"),
-    new CicloFormativo("ASIR", "Administración de Sistemas Informáticos en Red", "Superior", "Castilla y León", "Ávila", "Ávila"),
-    new CicloFormativo("SMR", "Sistemas Microinformáticos y Redes", "Medio", "Castilla y León", "Ávila", "Ávila"),
-    new CicloFormativo("FPB", "Formación Profesional Básica", "Básico", "Castilla y León", "Ávila", "Ávila"),
+    new CicloFormativo(1, "Desarrollo de Aplicaciones Web", "Superior", "Castilla y León", "Ávila", "Ávila"),
+    new CicloFormativo(2, "Desarrollo de Aplicaciones Multiplataforma", "Superior", "Castilla y León", "Ávila", "Ávila"),
+    new CicloFormativo(3, "Administración de Sistemas Informáticos en Red", "Superior", "Castilla y León", "Ávila", "Ávila"),
+    new CicloFormativo(4, "Sistemas Microinformáticos y Redes", "Medio", "Castilla y León", "Ávila", "Ávila"),
+    new CicloFormativo(5, "Formación Profesional Básica", "Básico", "Castilla y León", "Ávila", "Ávila"),
 ];
 
 function pasarAJSON(){
