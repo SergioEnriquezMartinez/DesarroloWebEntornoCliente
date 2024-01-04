@@ -6,23 +6,23 @@
 
 html {
     font-family: 'Arial', sans-serif;
-    background-color: #e0f7fa; /* Light blue background */
+    background-color: #e0f7fa;
 }
 
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: 20px auto;
 }
 
 section {
-    background-color: #fff; /* White background */
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #2196F3; /* Material Blue */
+    color: #2196F3;
 }
 
 form {
@@ -71,21 +71,19 @@ select {
 }
 
 #resultados {
-    background-color: #009688; /* Teal */
     color: #fff;
-    padding: 10px;
     margin-top: 10px;
-    border-radius: 4px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    border-radius: 4px;
 }
 
 thead {
-    background-color: #4caf50;
+    background-color: #044768;
     color: #fff;
 }
 
@@ -104,5 +102,53 @@ th:last-child, td:last-child {
 }
 
 tbody tr:hover {
-    background-color: #4dce83;
+    background-color: #3171fb;
+}
+
+.botonModificar {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botonModificar:hover {
+    background-color: #2980b9;
+}
+
+.botonEliminar {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botonEliminar:hover {
+    background-color: #c0392b;
+}
+
+#tablaResults {
+    border-radius: 4px;
+}
+
+#tablaContenido tr:nth-child(odd) {
+    background-color: #12d4ee;
+}
+
+#tablaContenido tr:nth-child(even) {
+    background-color: #11c8c8;
 }
