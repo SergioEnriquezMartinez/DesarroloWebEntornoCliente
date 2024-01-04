@@ -73,6 +73,7 @@ function crearCiclo(){
     let ciclo = new CicloFormativo(codigo, nombre_ciclo, grado, comunidad_autonoma, provincia, localidad);
     ciclosFormativos.push(ciclo);
     document.getElementById("formCrearCF").reset();
+    mostrarCiclos(ciclosFormativos);
 }
 
 function buscarCiclo() {
