@@ -192,6 +192,7 @@ function modificarCiclo(){
         }
     });
 
+    document.getElementById("codigo").disabled = false;
     mostrarCiclos(ciclosFormativos);
     document.getElementById("formCrearCF").reset();
 }
