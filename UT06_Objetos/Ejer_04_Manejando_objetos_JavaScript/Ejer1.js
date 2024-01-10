@@ -125,11 +125,37 @@ function buscarCiclo() {
 }
 
 function mostrarCiclos(ciclos){
-    let tabla = document.getElementById("tablaContenido");
+    let tablaHead = document.getElementById("tablaHead");
 
-    while (tabla.firstChild) {
-        tabla.removeChild(tabla.firstChild);
+    while (tablaHead.firstChild) {
+        tablaHead.removeChild(tablaHead.firstChild);
     }
+
+    let filaHead = document.createElement("tr");
+    let propiedades = ["Código", "Nombre", "Grado", "Comunidad Autónoma", "Provincia", "Localidad"];
+
+    for (let p in propiedades) {
+        let celdaHead = document.createElement("th");
+        celdaHead.textContent = propiedades[p];
+        celdaHead.addEventListener("click", ordenar);
+        filaHead.appendChild(celdaHead);
+    }
+    let celdaHead2 = document.createElement("th");
+    celdaHead2.textContent = "";
+    filaHead.appendChild(celdaHead2);
+    let celdaHead3 = document.createElement("th");
+    celdaHead3.textContent = "";
+    filaHead.appendChild(celdaHead3);
+
+    tablaHead.appendChild(filaHead);
+    
+
+    let tablaContenido = document.getElementById("tablaContenido");
+
+    while (tablaContenido.firstChild) {
+        tablaContenido.removeChild(tablaContenido.firstChild);
+    }
+
 
     ciclos.forEach(function(ciclo){
         let fila = document.createElement("tr");
@@ -170,7 +196,7 @@ function mostrarCiclos(ciclos){
         celdaBotonEliminar.appendChild(botonEliminar);
         fila.appendChild(celdaBotonEliminar);
 
-        tabla.appendChild(fila);
+        tablaContenido.appendChild(fila);
     });
 }
 
@@ -195,6 +221,23 @@ function modificarCiclo(){
     document.getElementById("codigo").disabled = false;
     mostrarCiclos(ciclosFormativos);
     document.getElementById("formCrearCF").reset();
+}
+
+function ordenar(){
+    let propiedades = ["codigo", "nombre_ciclo", "grado", "comunidad_autonoma", "provincia", "localidad"];
+    let propiedad = propiedades[this.cellIndex];
+
+    ciclosFormativos.sort(function(a, b){
+        if (a[propiedad] > b[propiedad]) {
+            return 1;
+        } else if (a[propiedad] < b[propiedad]) {
+            return -1;
+        } else {
+            return 0;
+        }
+    });
+
+    mostrarCiclos(ciclosFormativos);
 }
 
 window.onload = function(){
