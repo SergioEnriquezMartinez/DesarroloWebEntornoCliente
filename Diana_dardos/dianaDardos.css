@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body, .centrado {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circulo1 {
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+#circulo2 {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    background-color: rgb(223, 228, 199);
+}
+
+#circulo3 {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+#circulo4 {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color:  rgb(223, 228, 199);
+}
+
+#circulo5 {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+#circulo6 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+}
