@@ -9,44 +9,90 @@ body, .centrado {
     justify-content: center;
 }
 
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#marcadorContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+}
+
+#marcador {
+    display: flex;
+    flex-direction: column;
+}
+
+#marcadorContainer div {
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
 #circulo1 {
     width: 800px;
     height: 800px;
     border-radius: 50%;
-    background-color: green;
 }
 
 #circulo2 {
     width: 750px;
     height: 750px;
     border-radius: 50%;
-    background-color: rgb(223, 228, 199);
 }
 
 #circulo3 {
     width: 450px;
     height: 450px;
     border-radius: 50%;
-    background-color: red;
 }
 
 #circulo4 {
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    background-color:  rgb(223, 228, 199);
 }
 
 #circulo5 {
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background-color: green;
 }
 
 #circulo6 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.rojo {
     background-color: red;
+}
+
+.verde {
+    background-color: green;
+}
+
+.blanco {
+    background-color: rgb(223, 228, 199);
+}
+
+.azul {
+    background-color: #006dab;
+}
+
+.amarillo {
+    background-color: #d8a825;
+}
+
+.puntos {
+    padding: 10px;
 }
