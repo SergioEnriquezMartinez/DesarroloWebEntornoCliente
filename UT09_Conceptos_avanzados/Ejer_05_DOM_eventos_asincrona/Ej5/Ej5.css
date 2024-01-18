@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+}
+
+.cuadrado {
+    width: 100px;
+    height: 100px;
+}
+
+#cuadrado1 { background-color: #ff0000; }
+#cuadrado2 { background-color: #00ff00; }
+#cuadrado3 { background-color: #0000ff; }
+#cuadrado4 { background-color: #ffff00; }
+#cuadrado5 { background-color: #ff00ff; }
+#cuadrado6 { background-color: #00ffff; }
+#cuadrado7 { background-color: #f0f0f0; }
+#cuadrado8 { background-color: #333333; }
+#cuadrado9 { background-color: #990000; }

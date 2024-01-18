@@ -1,5 +1,5 @@
 let contadorClicks = 0;
-
+let contador = 0;
 function posicionarDardo(color, x, y) {
     let imagen = new Image();
     imagen.src = "img/" + color + ".png";
@@ -12,10 +12,13 @@ function posicionarDardo(color, x, y) {
     document.body.appendChild(imagen);
 }
 
+
+
+
 window.onload = function () {
     document.getElementById("circulo1").addEventListener("click", (evento) => {
         if (contadorClicks < 6) {
-            let color = contadorClicks % 2 === 0 ? "azul" : "amarillo";
+            let color = contadorClicks < 3 ? "azul" : "amarillo";
             
             posicionarDardo(color, evento.clientX, evento.clientY);
             

@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#s1 {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+#results {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+#element_node,
+#atribute_node,
+#text_node,
+#cdata_section_node,
+#entity_reference_node,
+#entity_node,
+#processing_instruction_node,
+#comment_node,
+#document_node,
+#document_type_node,
+#document_fragment_code,
+#notation_node {
+    background-color: #e0e0e0;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
