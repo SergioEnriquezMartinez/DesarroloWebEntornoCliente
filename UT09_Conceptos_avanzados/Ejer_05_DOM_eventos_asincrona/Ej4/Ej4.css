@@ -130,3 +130,7 @@ h1 {
     background-color: aquamarine;
     height: 50px;
 }
+
+.dardo {
+    pointer-events: none;
+}

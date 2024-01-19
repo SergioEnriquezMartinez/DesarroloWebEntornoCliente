@@ -9,6 +9,7 @@ function posicionarDardo(color, x, y) {
     imagen.style.position = "absolute";
     imagen.style.left = x + "px";
     imagen.style.top = y + "px";
+    imagen.classList.add("dardo");
 
     document.body.appendChild(imagen);
 }
