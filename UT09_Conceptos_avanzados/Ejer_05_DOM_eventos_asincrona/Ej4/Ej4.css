@@ -44,6 +44,12 @@ h1 {
     flex-direction: column;
 }
 
+#marcador div {
+    padding: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 #marcadorContainer div {
     padding: 10px;
     font-size: 1.3rem;
@@ -107,4 +113,20 @@ h1 {
 
 .puntos {
     padding: 10px;
+    height: 60px;
+    text-align: center;
+
+}
+
+.puntosResultado {
+    padding: 10px;
+    height: 30px;
+    font-size: 1.3rem;
+}
+
+#resultado {
+    font-size: 2rem;
+    text-align: center;
+    background-color: aquamarine;
+    height: 50px;
 }
