@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    text-align: center;
 }
 
 div {
@@ -13,10 +14,43 @@ ul {
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 button {
-    margin-right: 10px;
+    padding: 5px 10px;
     cursor: pointer;
+    background-color: rgb(194, 96, 96);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #c525cd;
+}
+
+#parrafos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#listas {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+/* Adding some styling to the sections for better visibility */
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ecf0f1;
 }

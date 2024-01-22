@@ -7,6 +7,8 @@ window.onload = function() {
         img.setAttribute("src", direccion);
         img.setAttribute("width", "600");
         img.setAttribute("alt", "Imagen " + aleatorio);
-        document.getElementById("contenedor").appendChild(img);
+
+        let firstChild = document.getElementById("contenedor").firstChild;
+        document.getElementById("contenedor").insertBefore(img, firstChild);
     });
 }

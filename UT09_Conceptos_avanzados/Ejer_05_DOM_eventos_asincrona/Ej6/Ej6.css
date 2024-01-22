@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: beige;
+}
+
+.semaforo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.palo {
+    width: 20px;
+    height: 400px;
+    background-color: #555;
+    margin-bottom: 0px;
+}
+
+.recipiente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #555;
+}
+
+.luz {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 5px solid #333;
+    transition: opacity 0.5s ease;
+}
+
+.rojo {
+    background-color: #cf3731;
+}
+
+.rojo2 {
+    background-color: rgb(255, 0, 0);
+}
+
+.amarillo {
+    background-color: #f0c54e;
+}
+
+.amarillo2 {
+    background-color: rgb(250, 225, 0);
+}
+
+.verde {
+    background-color: #5bde75;
+}
+
+.verde2 {
+    background-color: rgb(0, 255, 0);
+}
