@@ -1,10 +1,11 @@
 body {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: beige;
+    background-color: rgb(114, 107, 215);
 }
 
 .semaforo {
@@ -25,6 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #555;
+    border-radius: 10px;
 }
 
 .luz {
@@ -40,22 +42,36 @@ body {
     background-color: #cf3731;
 }
 
-.rojo2 {
-    background-color: rgb(255, 0, 0);
-}
-
 .amarillo {
     background-color: #f0c54e;
-}
-
-.amarillo2 {
-    background-color: rgb(250, 225, 0);
 }
 
 .verde {
     background-color: #5bde75;
 }
 
-.verde2 {
-    background-color: rgb(0, 255, 0);
+.negro {
+    background-color: black;
+}
+
+#lista {
+    list-style: none;
+    width: 500px;
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #564d91;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8c7cc5;
 }
