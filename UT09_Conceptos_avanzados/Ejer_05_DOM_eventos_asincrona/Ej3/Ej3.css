@@ -20,6 +20,7 @@ li {
 button {
     padding: 5px 10px;
     cursor: pointer;
+    margin: 10px;
     background-color: rgb(194, 96, 96);
     color: #fff;
     border: none;
