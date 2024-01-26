@@ -5,14 +5,14 @@ function cargarXMLDoc() {
 
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4) {
-            if (xhttp.status == 0) {
+            if (xhttp.status == 200) { // 200: Codigo de OK
                 document.getElementById("demo").textContent = "Texto cagado de forma asincrona";
             }
         }
         alert("+Hola mundo --> " + xhttp.readyState);
     };
 
-    xhttp.open("GET", "Esto es una prueba", true);
+    xhttp.open("GET", "hola.txt", true);
     xhttp.send(null);
 }
 
