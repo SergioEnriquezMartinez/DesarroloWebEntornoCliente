@@ -1,0 +1,70 @@
+html {
+    background-color: #1a415e;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin-top: 200px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#pista {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imagenPista {
+    position: relative;
+    z-index: 1;
+}
+
+.imagenesTortugas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.imagenesTortugas img{
+    width: 150px;
+}
+
+#tortuga1 {
+    top: 0px;
+    left: 10;
+}
+#tortuga2 {
+    top: 150px;
+    left: 10;
+}
+#tortuga3 {
+    top: 300px;
+    left: 10;
+}
+
+#boton {
+    background-color: #888;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150px;
+}
+
+#boton:hover {
+    background-color: #666;
+}
