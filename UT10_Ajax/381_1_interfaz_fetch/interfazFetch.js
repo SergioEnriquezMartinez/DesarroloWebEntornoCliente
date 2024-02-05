@@ -1,5 +1,5 @@
 function intefazFetch() {
-    fetch("nifAleatorio.php").then(response => {console.log(response);})
+    fetch("../nifAleatorio.php").then(response => {console.log(response);})
     .catch(error => {console.log(error);});
 }
 

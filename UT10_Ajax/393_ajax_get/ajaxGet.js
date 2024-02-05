@@ -1,7 +1,7 @@
 function ajaxGet() {
     let lista = document.querySelector("ul");
 
-    fetch("../381_interfaz_fetch/nifAleatorio.php?n=10&tipo=nie", {
+    fetch("../nifAleatorio.php?n=10&tipo=nie", {
         method: 'GET',
         mode: 'cors'
     }).then(respuesta => respuesta.json())

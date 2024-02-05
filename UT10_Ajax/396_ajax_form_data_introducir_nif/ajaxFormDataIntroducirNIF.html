@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ajaxFormDataIntroducirNIF.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>NIF válido: 26747485A</p>
+    <p>NIF no válido: 12345678A</p>
+
+    <form action="../validarNif.php" method="post">
+        <fieldset>
+            <label for="nif">Escriba el NIF que desee validar</label>
+            <input type="text" name="nif" id="nif">
+        </fieldset>
+        <button>Comprobar</button>
+    </form>
+    <div id="resultado">_ _ _</div>
+</body>
+</html>
