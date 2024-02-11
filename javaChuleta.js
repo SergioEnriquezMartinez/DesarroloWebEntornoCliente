@@ -42,7 +42,6 @@ let miArray2 = [1, 2, 3, 4, 5];
 for (let elemento of miArray2) {
   console.log(elemento);
 }
-// Resultado: Imprimirá cada elemento del array en la consola
 
 // Array de números desordenados
 let numeros = [5, 2, 9, 1, 5, 6];
@@ -166,4 +165,88 @@ frutas.forEach(function(fruta) {
   console.log(fruta);
 });
 
+// Este ejemplo ejecuta una función cada segundo utilizando setInterval
 
+function saludar() {
+  console.log('Hola, mundo!');
+}
+
+// Ejecutar la función 'saludar' cada segundo
+setInterval(saludar, 1000);
+
+
+// Este ejemplo muestra un mensaje después de 3 segundos utilizando setTimeout
+
+function mostrarMensaje() {
+  console.log('¡Han pasado 3 segundos!');
+}
+
+// Mostrar el mensaje después de 3 segundos
+setTimeout(mostrarMensaje, 3000);
+
+
+// Este ejemplo combina setInterval y setTimeout para mostrar un mensaje cada segundo durante 5 segundos y luego mostrar un mensaje adicional
+
+let contador = 0;
+
+function mostrarMensaje() {
+  console.log('Mensaje número ' + contador);
+  contador++;
+
+  if (contador >= 5) {
+    clearInterval(intervalo); // Detener setInterval después de 5 segundos
+    setTimeout(function() {
+      console.log('¡Han pasado 5 segundos! Ahora se mostrará un mensaje adicional.');
+    }, 1000);
+  }
+}
+
+// Mostrar un mensaje cada segundo durante 5 segundos
+const intervalo = setInterval(mostrarMensaje, 1000);
+
+
+
+//Promesas
+// Crear una función que devuelve una promesa
+function miPromesa() {
+  return new Promise((resolve, reject) => {
+    // Simular una operación asincrónica (en este caso, un setTimeout)
+    setTimeout(() => {
+      // Aquí puedes ejecutar cualquier lógica asíncrona, como una solicitud a una API
+      const exito = true;
+
+      // Verificar si la operación fue exitosa o no y resolver o rechazar la promesa
+      if (exito) {
+        // Si la operación fue exitosa, resuelve la promesa con un mensaje
+        resolve('¡La operación fue exitosa!');
+      } else {
+        // Si la operación falló, rechaza la promesa con un mensaje de error
+        reject('¡La operación falló!');
+      }
+    }, 2000); // Espera 2 segundos antes de ejecutar la lógica asíncrona
+  });
+}
+
+// Utiliza la promesa
+miPromesa()
+  .then(resultado => {
+    // Manejar el caso de éxito
+    console.log(resultado);
+  })
+  .catch(error => {
+    // Manejar el caso de error
+    console.error(error);
+  });
+
+
+//Recorrer las propiedades de un objeto
+const objeto = {
+  nombre: 'Juan',
+  edad: 30,
+  ciudad: 'Madrid'
+};
+
+// Utilizando Object.entries()
+for (const [clave, valor] of Object.entries(objeto)) {
+  console.log(`${clave}: ${valor}`);
+}
